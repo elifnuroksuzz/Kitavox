@@ -78,19 +78,6 @@ kitavox/
     └── ui.py                      # CSS yükleyici ve tema yönetimi
 ```
 
-## 🧪 Test
-
-```bash
-# Tüm testleri çalıştır
-npm test
-
-# Test kapsamı raporu
-npm run test:coverage
-
-# E2E testler
-npm run test:e2e
-```
-
 ## 📊 Teknik Detaylar
 
 ### Kullanılan Teknolojiler
