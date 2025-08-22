@@ -38,19 +38,44 @@ Kitavox, görme engelli bireyler başta olmak üzere geniş bir kullanıcı kitl
 ## 🏗️ Proje Yapısı
 
 ```
-Kitavox/
-├── src/
-│   ├── components/        # React bileşenleri
-│   ├── services/          # API servisleri
-│   ├── utils/            # Yardımcı fonksiyonlar
-│   ├── assets/           # Statik dosyalar
-│   └── styles/           # CSS/SCSS dosyaları
-├── public/               # Public dosyalar
-├── docs/                 # Dökümentasyon
-├── tests/                # Test dosyaları
-├── .env.example         # Örnek ortam değişkenleri
-├── package.json
-└── README.md
+kitavox/
+├── streamlit_app.py                 # Ana giriş noktası (kimlik doğrulama)
+├── .env                            # Çevre değişkenleri
+├── requirements.txt                # Python bağımlılıkları
+├── style.css                       # Global CSS stilleri
+│
+├── pages/                          # 📄 Streamlit sayfaları
+│   ├── 01_User_Profile.py         # Kullanıcı profil yönetimi
+│   ├── 02_Upload_Document.py      # Belge yükleme işlemleri
+│   ├── 03_Genre_Selection.py      # Tür seçimi ve tercihler
+│   ├── 04_Recommended_Books.py    # AI tabanlı kitap önerileri
+│   ├── 05_Listening_History.py    # Dinleme geçmişi ve istatistikler
+│   ├── 06_Favorites.py            # Favori kitaplar yönetimi
+│   ├── 07_Search_Books.py         # Kitap arama ve filtreleme
+│   ├── 08_Book_Summary.py         # Kitap özetleri ve detayları
+│   ├── 09_Ask_About_Book.py       # AI ile kitap hakkında sohbet
+│   ├── 10_Feedback.py             # Kullanıcı geri bildirimleri
+│   ├── 11_User_Settings.py        # Kullanıcı ayarları ve tercihler
+│   └── 12_Logout.py               # Oturum kapatma işlemleri
+│
+├── core/                           # 🧠 Çekirdek iş mantığı
+│   ├── __init__.py                # Modül başlatma dosyası
+│   ├── auth.py                    # Kimlik doğrulama ve güvenlik
+│   ├── database.py                # MongoDB bağlantısı ve koleksiyonlar
+│   ├── tts.py                     # Text-to-Speech motor yönetimi
+│   ├── gemini.py                  # Google Gemini AI entegrasyonu
+│   └── recommender.py             # Öneri sistemi algoritmaları (TF-IDF, vb.)
+│
+├── components/                     # 🔧 Tekrar kullanılabilir UI bileşenleri
+│   ├── __init__.py                # Modül başlatma dosyası
+│   ├── header.py                  # Uygulama başlık bileşeni
+│   ├── footer.py                  # Alt bilgi bileşeni
+│   └── audio_player.py            # Ses oynatıcı ve kontrol arayüzü
+│
+└── utils/                          # 🛠️ Yardımcı araçlar ve fonksiyonlar
+    ├── __init__.py                # Modül başlatma dosyası
+    ├── helpers.py                 # Genel yardımcı fonksiyonlar
+    └── ui.py                      # CSS yükleyici ve tema yönetimi
 ```
 
 ## 🧪 Test
